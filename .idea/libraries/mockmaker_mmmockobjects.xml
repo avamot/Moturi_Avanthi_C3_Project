@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="mockmaker.mmmockobjects" type="repository">
+    <properties maven-id="mockmaker:mmmockobjects:1.12.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/mockmaker/mmmockobjects/1.12.0/mmmockobjects-1.12.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
