@@ -80,7 +80,11 @@ class RestaurantTest {
     // the method will return the total order value
     @Test
     public void selecting_Items_From_Menu_Should_Display_Total_Order_Value() {
-        
+
+        restaurant.addToMenu("Sweet corn soup",119);
+        restaurant.addToMenu("Vegetable lasagne", 269);
+        restaurant.addToMenu("Sizzling brownie",319);
+
         List<String> items = new ArrayList<String>();
         items.add("Sweet corn soup");
         items.add("Vegetable lasagne");
