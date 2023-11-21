@@ -6,16 +6,17 @@ import java.util.ListIterator;
 public class RestaurantService {
     private static List<Restaurant> restaurants = new ArrayList<>();
 
-    public Restaurant findRestaurantByName(String restaurantName){
+    public Restaurant findRestaurantByName(String restaurantName) throws restaurantNotFoundException {
         Restaurant searchRestaurant = null, foundRestaurant = null;
-        ListIterator<Restaurant> listIterator = restaurants.listIterator();
-        while(listIterator.hasNext()) {
-            searchRestaurant = listIterator.next();
+        for (Restaurant restaurant : restaurants) {
+            searchRestaurant = restaurant;
             if (searchRestaurant.getName().contains(restaurantName)) {
                 foundRestaurant = searchRestaurant;
                 break;
             }
         }
+        if (foundRestaurant==null)
+              throw new restaurantNotFoundException("No Restaurant Found");
         return foundRestaurant;
     }
 

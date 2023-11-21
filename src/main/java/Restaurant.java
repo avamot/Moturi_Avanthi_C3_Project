@@ -5,6 +5,11 @@ import java.util.List;
 
 public class Restaurant {
     private String name;
+
+    public String getLocation() {
+        return location;
+    }
+
     private String location;
     public LocalTime openingTime;
     public LocalTime closingTime;
