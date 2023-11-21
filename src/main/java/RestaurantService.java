@@ -8,9 +8,8 @@ public class RestaurantService {
 
     public Restaurant findRestaurantByName(String restaurantName){
         Restaurant searchRestaurant = null, foundRestaurant = null;
-        ListIterator<Restaurant> listIterator = restaurants.listIterator();
-        while(listIterator.hasNext()) {
-            searchRestaurant = listIterator.next();
+        for (Restaurant restaurant : restaurants) {
+            searchRestaurant = restaurant;
             if (searchRestaurant.getName().contains(restaurantName)) {
                 foundRestaurant = searchRestaurant;
                 break;
